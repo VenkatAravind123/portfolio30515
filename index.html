@@ -1,0 +1,81 @@
+
+
+<html>
+    <head>
+        <title>PortFolio</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script>
+            const typingText = document.getElementById("typing-text");
+            const texts = ["Developer", "Designer", "Engineer"]; // Array of texts to display
+    
+            let index = 0;
+            let letterIndex = 0;
+            let currentText = "";
+            let isDeleting = false;
+    
+            function type() {
+                currentText = texts[index];
+                if (!isDeleting) {
+                    typingText.textContent = currentText.substring(0, letterIndex + 1);
+                    letterIndex++;
+                    if (letterIndex === currentText.length) {
+                        isDeleting = true;
+                    }
+                } else {
+                    typingText.textContent = currentText.substring(0, letterIndex - 1);
+                    letterIndex--;
+                    if (letterIndex === 0) {
+                        isDeleting = false;
+                        index++;
+                        if (index === texts.length) {
+                            index = 0;
+                        }
+                    }
+                }
+    
+                const speed = 100; // Typing speed in milliseconds
+                setTimeout(type, speed);
+            }
+    
+            // Start typing animation
+            
+        </script>
+    </head>
+    <body >
+        <h2 align="center"></h2>
+        
+
+        <nav>
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">PortFolio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="https://flowcv.com/resume/l4dk1l4o3i"  target="_blank">Resume</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+        </nav>
+        <br><br>
+        <section class="home" id="home">
+            <div class="max-width">
+                <div class="home-content">
+                    <div class="text-1"></div>
+                    <div class="text-2">Venkat Aravind</div>
+                    <div class="text-3">I am Passionate <b id="typing-text"></b> from India</div>
+                    <button onclick={type}>Start</button>
+                <br>
+            <div class="row">
+               <a href="https://github.com/VenkatAravind123"><img src="github.png" width="40px" height="40px"></a><span>  </span>
+               <a href="https://www.linkedin.com/in/venkat-aravind-365b0b26a/"><img src="linkedin.png" width="40px" height="40px"></a><span>  </span>
+               <a href="https://twitter.com/@VenkatA1267954"><img src="twitter.png" width="40px" height="40px"></a><span>  </span>
+               <a href="https://www.youtube.com/channel/UCbq8PdtiNye4nt68qiqfJsg"><img src="youtube.png" width="55px" height="40px"></a><span>  </span>
+            </div>
+                <br>
+                    <a href="mailto:singh.pulkit.0076@gmail.com" class="hire about-img">Hire him</a>
+                </div>
+            </div>
+            <img src="aravind1.jpg" class="image"/>
+            
+        </section>
+    </body>
+</html>
