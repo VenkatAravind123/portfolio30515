@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Venkat Aravind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- <div class="logo">VA</div> -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="https://flowcv.com/resume/l4dk1l4o3i" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="aravind.jpg" alt="Venkat Aravind">
+                    <div class="experience-badge">
+                        <span>CS</span>
+                        Student
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3>Full Stack Developer</h3>
+                    <p>Skilled Computer Science and Engineering Student with a zeal in Full Stack Development. Interested in effectively participating in various projects while playing major role in it. Organized and dependable candidate successful at managing multiple priorities with a positive attitude.</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="info-title"><i class="fas fa-user"></i> Name:</span>
+                            <span class="info-value">Venkat Aravind</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title"><i class="fas fa-envelope"></i> Email:</span>
+                            <span class="info-value">2200030515cseh@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title"><i class="fas fa-map-marker-alt"></i> Location:</span>
+                            <span class="info-value">India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-title"><i class="fas fa-graduation-cap"></i> Degree:</span>
+                            <span class="info-value">Computer Science and Engineering</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://flowcv.com/resume/l4dk1l4o3i" target="_blank" class="btn btn-primary">Download CV</a>
+                </div>
+            </div>
+            
+            <div class="skills-section">
+                <h3>My Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Venkat Aravind. All Rights Reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/VenkatAravind123" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/venkat-aravind-365b0b26a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/@VenkatA1267954" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCbq8PdtiNye4nt68qiqfJsg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger?.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

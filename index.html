@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkat Aravind | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- <div class="logo"></div> -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="https://flowcv.com/resume/l4dk1l4o3i" target="_blank">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h4 class="subtitle">Hello, I'm</h4>
+                <h1 class="title">Venkat Aravind</h1>
+                <h2 class="dynamic-text">I am Passionate <span id="typing-text"></span> from India</h2>
+                
+                <div class="cta-buttons">
+                    <a href="mailto:singh.pulkit.0076@gmail.com" class="btn btn-primary">Hire Me</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Work</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/VenkatAravind123" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/venkat-aravind-365b0b26a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/@VenkatA1267954" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCbq8PdtiNye4nt68qiqfJsg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="img-border">
+                    <img src="aravind1.jpg" alt="Venkat Aravind">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Typing animation
+        const typingText = document.getElementById("typing-text");
+        const texts = ["Developer", "Designer", "Engineer"]; 
+        
+        let index = 0;
+        let letterIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+        
+        function type() {
+            currentText = texts[index];
+            if (!isDeleting) {
+                typingText.textContent = currentText.substring(0, letterIndex + 1);
+                letterIndex++;
+                if (letterIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1500); // Pause at the end of word
+                    return;
+                }
+            } else {
+                typingText.textContent = currentText.substring(0, letterIndex - 1);
+                letterIndex--;
+                if (letterIndex === 0) {
+                    isDeleting = false;
+                    index++;
+                    if (index === texts.length) {
+                        index = 0;
+                    }
+                    setTimeout(type, 500); // Pause before typing next word
+                    return;
+                }
+            }
+        
+            const speed = isDeleting ? 80 : 120; // Different speeds for typing and deleting
+            setTimeout(type, speed);
+        }
+        
+        // Start typing animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000); // Start after 1 second
+            
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger?.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

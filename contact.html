@@ -1,0 +1,181 @@
+.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Venkat Aravind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- <div class="logo">VA</div> -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="https://flowcv.com/resume/l4dk1l4o3i" target="_blank">Resume</a></li>
+                    <li><a href="contact.html" class="active">Contact Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact <span>Me</span></h2>
+                <div class="underline"></div>
+                <p class="section-description">Feel free to get in touch with me. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Tadepalli, Guntur, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:2200030515cseh@gmail.com">2200030515cseh@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+91 7993847898</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/VenkatAravind123" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/venkat-aravind-365b0b26a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/@VenkatA1267954" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UCbq8PdtiNye4nt68qiqfJsg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Venkat Aravind. All Rights Reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/VenkatAravind123" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/venkat-aravind-365b0b26a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/@VenkatA1267954" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCbq8PdtiNye4nt68qiqfJsg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger?.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would normally send this data to a server
+                // For demonstration, we'll just show an alert
+                alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+                contactForm.reset();
+                
+                // In a real implementation, you'd use fetch() to send to a backend:
+                /*
+                fetch('your-backend-endpoint', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, subject, message }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message. Please try again.');
+                });
+                */
+            });
+        });
+    </script>
+</body>
+</html>

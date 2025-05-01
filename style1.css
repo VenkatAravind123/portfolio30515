@@ -1,0 +1,250 @@
+/* Portfolio Page Styles */
+.portfolio-section {
+  padding: 120px 0 80px;
+}
+
+/* Personal Details Card */
+.personal-details-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.card-header {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card-header i {
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.card-header h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.personal-details-content {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(78, 84, 200, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.detail-info h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #888;
+}
+
+.detail-info p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.detail-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.detail-info a:hover {
+  text-decoration: underline;
+}
+
+/* Skills Cards Section */
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.skill-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.skill-level {
+  margin-top: 15px;
+}
+
+.skill-level .skill-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.skill-level .skill-progress {
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 4px;
+  width: 0; /* Initially 0, will be animated */
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-level span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Education Timeline */
+.education-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 50px auto 0;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #e9ecef;
+  top: 0;
+  bottom: 0;
+  left: 25px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 60px;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  left: 16px;
+  top: 0;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.timeline-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.timeline-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-info span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.timeline-info i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.timeline-content p {
+  color: #666;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .personal-details-content {
+      grid-template-columns: 1fr;
+  }
+  
+  .skills-cards {
+      grid-template-columns: 1fr;
+  }
+  
+  .timeline-info {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .timeline-info span {
+      margin-bottom: 5px;
+  }
+}
