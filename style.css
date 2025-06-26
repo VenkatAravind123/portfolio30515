@@ -5,6 +5,10 @@
     --light-color: #f8f9fa;
     --dark-color: #212529;
     --transition: all 0.3s ease;
+    --mobile-padding: 15px;
+    --tablet-width: 768px;
+    --laptop-width: 992px;
+    --desktop-width: 1200px;
   }
   
   * {
@@ -22,12 +26,17 @@
   }
   
   .container {
-    width: 90%;
+    width: min(90%, var(--desktop-width));
+    padding: 0 var(--mobile-padding);
+    margin: 0 auto;
+    /* width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px; */
   }
-  
+  html {
+    font-size: 16px;
+}
   /* Header Styles */
   header {
     position: fixed;
